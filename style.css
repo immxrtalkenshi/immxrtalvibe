@@ -30,6 +30,21 @@ nav a {
   font-size: 14px;
 }
 
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(255, 0, 0, 0.4), 0 0 40px rgba(0, 0, 0, 0.8), inset 0 0 30px rgba(255, 0, 0, 0.1); }
+  50% { box-shadow: 0 0 30px rgba(255, 0, 0, 0.6), 0 0 60px rgba(0, 0, 0, 0.8), inset 0 0 40px rgba(255, 0, 0, 0.2); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
 .hero {
   height: 90vh;
   display: flex;
@@ -37,15 +52,68 @@ nav a {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background: 
+    url('assets/background.png') center 20%/cover no-repeat fixed,
+    linear-gradient(135deg, rgba(10, 10, 10, 0) 0%, rgba(26, 10, 10, 0) 50%, rgba(15, 15, 15, 0) 100%);
+  position: relative;
+  overflow: hidden;
+  background-attachment: fixed;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255, 0, 0, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 0, 0, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 50% 0%, rgba(255, 0, 0, 0.03) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 1;
+  animation: glow-pulse 4s ease-in-out infinite;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(90deg, transparent 0%, rgba(255, 0, 0, 0.01) 50%, transparent 100%),
+    repeating-linear-gradient(0deg, rgba(255, 0, 0, 0.005) 0px, transparent 2px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.1;
 }
 
 .hero h1 {
   font-size: 64px;
   letter-spacing: 4px;
+  position: relative;
+  z-index: 2;
+  text-shadow: 
+    0 0 10px rgba(0, 0, 0, 0.9),
+    0 0 20px rgba(0, 0, 0, 0.9),
+    0 0 40px rgba(0, 0, 0, 0.9),
+    2px 2px 4px rgba(0, 0, 0, 0.95);
+  font-weight: 900;
+  animation: float 4s ease-in-out infinite;
 }
 
 .hero p {
-  opacity: 0.7;
+  opacity: 0.95;
+  position: relative;
+  z-index: 2;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.95);
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 0.5s;
 }
 
 .btn {
@@ -55,6 +123,24 @@ nav a {
   color: black;
   text-decoration: none;
   font-weight: bold;
+  position: relative;
+  z-index: 2;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3), 0 8px 20px rgba(0, 0, 0, 0.5);
+  border: 2px solid white;
+  letter-spacing: 1px;
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 1s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: transparent;
+  color: #ff4444;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.4), inset 0 0 10px rgba(255, 0, 0, 0.2);
+  transform: scale(1.1) translateY(-5px);
+  border-color: #ff4444;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
 }
 
 .drop {
