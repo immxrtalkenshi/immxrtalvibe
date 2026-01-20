@@ -280,3 +280,15 @@ section {
   margin-top: 20px;
   text-align: center;
 }
+.hero-text {
+  position: absolute;           /* keeps overlay */
+  top: 50%;                     /* centers vertically */
+  left: 50%;                    /* centers horizontally */
+  transform: translate(-50%, -50%);
+  display: flex;                /* stacks children */
+  flex-direction: column;       /* vertical order */
+  align-items: center;          /* center horizontally */
+  gap: 10px;                    /* space between items */
+  text-align: center;
+  z-index: 10;                  /* keeps text above image */
+}
