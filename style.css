@@ -273,3 +273,10 @@ git commit -m "Force dark background for logo"
 section {
   margin-top: 50px;
 }
+/* make text participate in page flow */
+.hero-text {
+  position: relative !important;
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+}
