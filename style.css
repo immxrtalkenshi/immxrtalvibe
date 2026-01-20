@@ -215,3 +215,10 @@ footer {
   border-top: 1px solid #222;
   opacity: 0.6;
 }
+.top-image {
+  display: block;      /* centers the image horizontally */
+  margin: 20px auto;   /* top/bottom spacing */
+  max-width: 420px;    /* limits how big it can get */
+  width: 90%;          /* scales on small screens */
+  height: auto;        /* keeps proportions correct */
+}
