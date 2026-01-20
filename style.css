@@ -217,8 +217,8 @@ footer {
 }
 .top-image {
   display: block;      /* centers the image horizontally */
-  margin: 20px auto;   /* top/bottom spacing */
-  max-width: 420px;    /* limits how big it can get */
+  margin: 10px auto;   /* top/bottom spacing */
+  max-width: 100px;    /* limits how big it can get */
   width: 90%;          /* scales on small screens */
   height: auto;        /* keeps proportions correct */
 }
