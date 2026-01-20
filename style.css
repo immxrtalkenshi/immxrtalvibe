@@ -14,7 +14,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 5px;
   border-bottom: 1px solid #222;
 }
 
