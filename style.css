@@ -14,8 +14,9 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 2px;
+  padding: 1px;
   border-bottom: 1px solid #222;
+  animation: logo-glow 2.5s ease-in-out infinite;
 }
 
 @keyframes logo-glow {
