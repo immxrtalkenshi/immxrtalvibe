@@ -219,7 +219,7 @@ footer {
 .top-image {
   display: block;      /* centers the image horizontally */
   margin: 10px auto;   /* top/bottom spacing */
-  max-width: 450px;    /* limits how big it can get */
+  max-width: 400px;    /* limits how big it can get */
   width: 300%;          /* scales on small screens */
   height: auto;        /* keeps proportions correct */
 }
