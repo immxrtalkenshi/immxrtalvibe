@@ -234,3 +234,15 @@ body {
   padding: 0;
 }
 git commit -m "Force dark background for logo"
+.logo {
+  animation: flicker 1.4s infinite;
+  filter: drop-shadow(0 0 4px red);
+}
+
+@keyframes flicker {
+  0%   { filter: drop-shadow(0 0 4px red); }
+  40%  { filter: drop-shadow(0 0 10px crimson); }
+  80%  { filter: drop-shadow(0 0 20px red); }
+  90%  { filter: drop-shadow(0 0 3px red); }
+  100% { filter: drop-shadow(0 0 12px crimson); }
+}
