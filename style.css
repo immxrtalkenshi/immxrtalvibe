@@ -30,17 +30,17 @@ header {
 }
 
 .logo {
-  font-weight: bold;
-  letter-spacing: 2px;
-  animation: logo-glow 2.5s ease-in-out infinite;
+  height: 50px;
+  width: auto;
   cursor: pointer;
   transition: all 0.3s ease;
+  filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.6)) drop-shadow(0 0 20px rgba(255, 0, 0, 0.4));
+  animation: logo-glow 2.5s ease-in-out infinite;
 }
 
 .logo:hover {
-  letter-spacing: 4px;
-  text-shadow: 0 0 30px rgba(255, 0, 0, 1), 0 0 50px rgba(255, 0, 0, 0.8);
-  color: #ff0000;
+  filter: drop-shadow(0 0 30px rgba(255, 0, 0, 1)) drop-shadow(0 0 50px rgba(255, 0, 0, 0.8));
+  transform: scale(1.05);
 }
 
 nav a {
