@@ -26,16 +26,15 @@ header {
 }
 .site-header {
   position: fixed;
-  top: 20px;
-  left: 40px;
-  z-index: 1000;
+  top: 24px;          /* pulls it DOWN into view */
+  left: 24px;         /* pulls it AWAY from the edge */
+  z-index: 9999;
 }
 
 .site-logo {
-  width: 70px;      /* adjust size here */
+  width: 110px;       /* main size */
   height: auto;
-  max-width: 30vw;   /* keeps it responsive */
-}.logo {
+  max-width: 28vw;    /* mobile safety */}.logo {
   max-width: 70px;
   height: auto;
   filter: drop-shadow(0 0 12px red);
