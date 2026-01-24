@@ -12,21 +12,30 @@ body {
 }
 
 /* ===== HEADER ===== */
-header {
+position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  padding: 0 40px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 16px 32px;
-  border-bottom: 1px solid #222;
+  justify-content: space-between;
+  z-index: 20;
+  background: transparent;
 }
 
 .logo {
-  display: block;
-  margin: 0 auto;
-  max-width: 320px;
-  filter: drop-shadow(0 0 10px red);
-  animation: flicker 1.4s infinite;
+  max-width: 260px;
 }
+
+.logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 0 12px red);
+}
+🚫 REMOVE:
 
 /* 🔥 remove insane scaling */
 .top-image {
@@ -39,44 +48,18 @@ header {
 
 /* ===== HERO ===== */
 .hero {
-  min-height: 100vh;
   position: relative;
+  min-height: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  background:
-    url("assets/background.png") center center / cover no-repeat;
+  background-image: url("assets/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   overflow: hidden;
 }
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle, rgba(255,0,0,0.1), transparent 60%);
-  z-index: 1;
-}
-
-.hero-text {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.hero h1 {
-  font-size: 64px;
-  letter-spacing: 2px;
-  animation: float 4s ease-in-out infinite;
-}
-
-.hero p {
-  font-size: 22px;
-  opacity: 0.9;
-}
-
 .btn {
   margin-top: 20px;
   padding: 12px 32px;
@@ -128,4 +111,18 @@ footer {
   0% { filter: drop-shadow(0 0 6px red); }
   50% { filter: drop-shadow(0 0 18px crimson); }
   100% { filter: drop-shadow(0 0 8px red); }
+}
+nav a,
+nav a:visited,
+nav a:active {
+  color: #ff4444;
+  text-decoration: none;
+  margin-left: 24px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ff0000;
+  text-shadow: 0 0 10px rgba(255,0,0,0.8);
 }
