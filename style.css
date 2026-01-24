@@ -32,7 +32,7 @@ header {
 }
 
 .site-logo {
-  width: 120px;      /* adjust size here */
+  width: 90px;      /* adjust size here */
   height: auto;
   max-width: 30vw;   /* keeps it responsive */
 }.logo {
