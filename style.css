@@ -292,3 +292,10 @@ section {
   text-align: center;
   z-index: 10;                  /* keeps text above image */
 }
+.hero {
+  min-height: 100vh;              /* Full screen */
+  background-image: url("your-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
