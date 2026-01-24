@@ -32,10 +32,10 @@ header {
 }
 
 .site-logo {
-  width: 110px;       /* main size */
+  width: 60px;       /* main size */
   height: auto;
   max-width: 28vw;    /* mobile safety */}.logo {
-  max-width: 70px;
+  max-width: 20px;
   height: auto;
   filter: drop-shadow(0 0 12px red);
 }
