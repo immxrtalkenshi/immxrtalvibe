@@ -30,8 +30,9 @@ header {
   height: auto;
   filter: drop-shadow(0 0 12px red);
 }
-
-/* NAV */
+.logo {
+  display: block;
+}/* NAV */
 nav a {
   color: #ff4444;
   text-decoration: none;
