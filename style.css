@@ -12,7 +12,8 @@ body {
 }
 
 /* ===== HEADER ===== */
-position: absolute;
+header {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -21,69 +22,95 @@ position: absolute;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 20;
-  background: transparent;
+  z-index: 10;
 }
 
 .logo {
   max-width: 260px;
-}
-
-.logo img {
-  width: 100%;
   height: auto;
-  display: block;
   filter: drop-shadow(0 0 12px red);
 }
-🚫 REMOVE:
 
-/* 🔥 remove insane scaling */
-.top-image {
-  display: block;
-  margin: 10px auto;
-  max-width: 320px;
-  width: 100%;
-  height: auto;
+/* NAV */
+nav a {
+  color: #ff4444;
+  text-decoration: none;
+  margin-left: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+nav a:hover {
+  color: #ff0000;
+  text-shadow: 0 0 10px rgba(255,0,0,0.8);
 }
 
 /* ===== HERO ===== */
 .hero {
-  position: relative;
   min-height: 100vh;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-image: url("assets/background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  position: relative;
 }
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 90%;
+}
+
+.hero h1 {
+  font-size: 56px;
+  letter-spacing: 3px;
+  margin-bottom: 14px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* BUTTON */
 .btn {
-  margin-top: 20px;
-  padding: 12px 32px;
-  font-weight: bold;
+  padding: 12px 36px;
   background: #fff;
   color: #000;
+  text-decoration: none;
+  font-weight: bold;
   border: 2px solid #fff;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .btn:hover {
   background: transparent;
   color: #ff4444;
   border-color: #ff4444;
+  box-shadow: 0 0 20px rgba(255,0,0,0.7);
 }
 
-/* ===== DROP SECTION ===== */
+/* ===== DROP ===== */
 .drop {
   padding: 120px 40px;
   text-align: center;
 }
 
-/* ===== PRODUCT ===== */
 .product img {
   max-width: 280px;
   margin-bottom: 20px;
@@ -91,6 +118,21 @@ position: absolute;
 
 .product h3 {
   letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.product button {
+  padding: 12px 30px;
+  background: #fff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.product button:hover {
+  background: transparent;
+  color: #ff4444;
+  border: 2px solid #ff4444;
 }
 
 /* ===== FOOTER ===== */
@@ -99,30 +141,4 @@ footer {
   text-align: center;
   border-top: 1px solid #222;
   opacity: 0.6;
-}
-
-/* ===== ANIMATIONS ===== */
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-}
-
-@keyframes flicker {
-  0% { filter: drop-shadow(0 0 6px red); }
-  50% { filter: drop-shadow(0 0 18px crimson); }
-  100% { filter: drop-shadow(0 0 8px red); }
-}
-nav a,
-nav a:visited,
-nav a:active {
-  color: #ff4444;
-  text-decoration: none;
-  margin-left: 24px;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: #ff0000;
-  text-shadow: 0 0 10px rgba(255,0,0,0.8);
 }
